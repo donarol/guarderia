@@ -1,0 +1,40 @@
+<div class="contenedor">
+
+    <div class="contenido">
+      <button type="button" class="btn btn-secondary" routerLink="/turno_inicio">Atras</button>
+      <div *ngFor="let componente_0 of componentes_0">
+        <p>{{componente_0.etiqueta}}</p>
+        <input class="form-control form-control-sm" type="text" placeholder={{componente_0.place}}>
+      </div>
+      <div class="selectores">
+        <p>Sucursal:</p>
+        <p>{{sucursal.nombre}}</p>
+      </div>
+      <div class="selectores">
+        <p>Gestion:</p>
+        <select class="form-control"(change)='onChangeGestion($event)'>
+          <option *ngFor="let ges of gestion" value="{{ges}}">{{ges}}</option>
+        </select>
+      </div>
+      <!--
+      <div class="selectores" *ngFor="let componente of componentes">
+        <p>{{componente.etiqueta}}</p>
+        <select class="form-control">
+          <option *ngFor="let dato of componente.datos">{{dato}}</option>
+        </select>
+      </div>
+      -->
+
+      <button type="button" class="btn btn-secondary">Crear Turno</button>
+    </div>
+    <nav class="nave">
+        <label for="exampleFormControlSelect2">Lista de Turnos</label>
+        <select size="8" class="form-control">
+          <option data-toggle="modal" data-target="#modal-turnos" class="list-group-item list-group-item-action" *ngFor="let turno of turnos" (click)=ver(turno)>{{turno.nombre}}</option>
+        </select>
+    </nav>
+  </div>
+  <div class="modal fade" id="modal-turnos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <app-turno-datos [turno]="turno"></app-turno-datos>
+  </div>
+    <!-- Modal -->

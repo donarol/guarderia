@@ -1,0 +1,23 @@
+<div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Inicio Sesi&oacute;n</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form (submit)="login()">
+          <div class="modal-body">
+            <label>Ingrese su Email:</label>
+            <input type="email" name="email" placeholder="Email..." id="email" [(ngModel)]="email">
+            <input type="password" name="password" placeholder="Contrase&ntilde;a..." id="password" [(ngModel)]="password">
+          </div>
+          <div class="modal-footer">
+            <a href="">¿Olvidaste tu Contrase&ntilde;a?</a>
+            <input type="submit" value="Iniciar Sesi&oacute;n" class="btn btn-primary">
+          </div>
+        </form>
+
+    </div>
+  </div>
+

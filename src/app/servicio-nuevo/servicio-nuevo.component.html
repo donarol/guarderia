@@ -1,0 +1,46 @@
+<div class="inicio">
+  <div class="superior">
+    <div class="izq">
+      <button class="btn btn-secondary" routerLink="/servicio_inicio">Atras</button>
+      <div *ngFor="let componente_0 of componentes_0">
+        <p>{{componente_0}}</p>  
+        <input class="form-control form-control-sm" type="text">
+      </div>
+      <div class="corto" *ngFor="let componente of componentes">
+        <p>{{componente.etiqueta}}</p>
+        <select class="form-control">
+          <option *ngFor="let dato of componente.datos">{{dato}}</option>
+        </select>
+      </div>
+    </div>
+     <div class="der">
+        <label>Motivo:</label>
+        <textarea class="form-control"></textarea>
+     </div> 
+  </div>
+  <div class="inferior">
+      <table class="table" id="tabla">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Seleccion</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Monto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <th><input type="checkbox"></th>
+              <th>Todos</th>
+              <th>123</th>
+            </tr>
+          </tbody>
+      </table>
+  </div>
+  <div class="inferior">
+      <button class="btn btn-secondary" routerLink="/servicio_inicio">Crear Servicio</button>
+      
+  </div>
+
+</div>

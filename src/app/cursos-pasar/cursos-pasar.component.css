@@ -1,0 +1,33 @@
+.inicio{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+}
+.izq{
+    margin: 1%;
+    width: 28%;
+}
+.der{
+    margin: 1%;
+    width: 68%;
+}
+.inferior{
+    margin: 1%;
+    width: 100%;
+}
+select{
+    margin-bottom: 1%;
+}
+.der div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.der > div > label{
+    width: 30%;
+}
+.der .form-control{
+    width: 70%;
+}
+.izq option{
+	cursor: pointer;
+}

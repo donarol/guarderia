@@ -1,0 +1,110 @@
+<div class="inicio">
+  <div class="superior">
+    <div class="nave">
+      <figcaption >
+          <img src="" alt="">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile">
+          <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+      </figcaption>
+    </div>
+    <div class="datos">
+      <div *ngFor="let dato of datos" class="{{dato.clase}}" >
+          <p>{{dato.etiqueta}}</p>
+          <input class="form-control form-control-sm" type="{{dato.tipo}}" [(ngModel)]="dato.modelo">
+      </div>
+
+      <div class="corto">
+        <p>Alergias:</p>
+        <div class="d-flex bd-highlight">
+          <select class="form-control">
+            <option *ngFor="let alergia of alergias">{{alergia.nombre}}</option>
+          </select>
+          <button  data-toggle="modal" data-target="#modal-alergias" type="button" class="btn btn-secondary">...</button>
+        </div>
+
+      </div>
+      
+      <div class="largo">
+        <p>Domicilio:</p>
+        <input class="form-control form-control-sm" type="text" [(ngModel)]='alumno.domicilio'>
+      </div>
+
+      <div class="corto">
+          <p>Curso:</p>
+          <div class="d-flex bd-highlight">
+            <input class="form-control form-control-sm" type="text" readonly>
+            <button id="btn_cursos"type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-cursos" >...</button>
+          </div>
+
+      </div>
+      <div class="corto">
+        <p>Turno:</p>
+        <input class="form-control form-control-sm" type="text"placeholder="Aqui el turno" readonly >
+      </div>
+      <div *ngFor="let dato_2 of datos_2" class="{{dato_2.clase}}">
+        <p>{{dato_2.etiqueta}}</p>
+        <input class="form-control form-control-sm" type="text">
+      </div>
+      <div *ngFor="let certificado of certificados"  class="largo">
+        <label class="etiqueta">{{certificado.etiqueta}}</label>
+        <label class="switch">
+          <input type="checkbox" [(ngModel)]='certificado.modelo'>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
+      <div class="largo text-right">
+        <p><span>Fecha de Inscripcion: </span>La Fecha</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="inferior">
+      <div class="input-group justify-content-between ">
+        <button data-toggle="modal" data-target="#modal-pariente" type="button" class="btn btn-secondary">Agregar Pariente</button>
+          <div class="input-group-prepend pull-right">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input type="text" class="form-control" placeholder="Buscar..." >
+          </div>
+      </div>
+      <table class="table" id="tabla">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Actividad</th>
+              <th scope="col">fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th scope="col">1</th>
+                  <th scope="col">aa</th>
+                  <th scope="col">as</th>
+                </tr>
+          </tbody>
+      </table>
+      <div >
+        <button id="btn_inscribir"type="button " class="btn btn-secondary" (click)="inscribir()">Inscribir Alumno</button>
+      </div>
+
+        
+    </div>
+
+</div>
+
+  <!-- Modal -->
+<div class="modal fade" id="modal-alergias" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <app-alergias-nuevo [alergias]='alergias'></app-alergias-nuevo>
+</div>
+<div class="modal fade " id="modal-cursos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <app-cursos-lista></app-cursos-lista>
+</div>
+
+<div class="modal fade " id="modal-pariente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <app-pariente-nuevo></app-pariente-nuevo>
+</div>
+  
+

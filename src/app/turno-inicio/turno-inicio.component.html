@@ -1,0 +1,22 @@
+<div class="inicio">
+  <h2>Turnos Actuales</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" *ngFor="let titulo of titulos">{{titulo}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let turno of turnos; index as i"routerLink="/turno_cambio/{{turno.id}}" (click)="ver(turno)">
+        <th>{{i+1}}</th>
+        <th>{{turno.nombre}}</th>
+        <th>{{turno.monto}}</th>
+        <th>{{turno.horaInicio}}</th>
+        <th>{{turno.horaFin}}</th>
+      </tr>
+    </tbody>
+  </table>
+  <div class="contenido">
+    <span><span></span><a routerLink="/turno_nuevo">Agregar Nuevo Turno</a></span>
+  </div>
+</div>

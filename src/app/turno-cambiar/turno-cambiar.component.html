@@ -1,0 +1,34 @@
+<div class="inicio">
+  <button  type="button" class="btn btn-secondary" routerLink="/turno_inicio">Atras</button>
+  <div>
+    <p>Nombre:</p>
+    <p>Aqui el Nombre</p>
+    <a href="">Cambiar</a>
+  </div>
+  <div>
+    <p>Monto:</p>
+    <p>Aqui el Monto</p>  
+  </div>
+  <div>
+    <p>Hora Inicio:</p>
+    <p>Aqui la hora inicio</p>
+  </div>
+  <div>
+    <p>Hora Fin:</p>
+    <p>Aqui la hora Fin</p>
+  </div>
+  <h5>Historial de Cambios</h5>
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" *ngFor="let titulo of titulos">{{titulo}}</th>
+        </tr>
+      </thead>
+      <tbody>
+          <th>1</th>
+          <th>Administrador Nombre</th>
+          <th>se cambio de ... a ...</th>
+          <th>fecha</th>
+      </tbody>
+    </table>
+</div>

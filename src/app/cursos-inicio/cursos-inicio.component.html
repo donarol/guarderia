@@ -1,0 +1,5 @@
+<div class="inicio">
+  <div class="columna" *ngFor="let componente of componentes">
+    <a routerLink="/{{componente.router}}">{{componente.etiqueta}}</a>
+  </div>
+</div>

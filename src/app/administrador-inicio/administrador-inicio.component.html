@@ -1,0 +1,9 @@
+<div class="inicio" *ngFor="let administrador of administradores">
+  <div>
+    <img src="{{administrador.fotografia}}">
+  </div>
+  <div>
+    <p>{{administrador.nombre}} {{administrador.apellido}}</p>
+    <button type="button" class="btn btn-secondary"routerLink="/administrador_datos" (click)="ver(administrador)">Ver Datos</button>
+  </div>
+</div>

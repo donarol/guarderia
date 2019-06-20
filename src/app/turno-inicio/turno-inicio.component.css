@@ -1,0 +1,21 @@
+.inicio,.table{
+    margin: 1%;
+    width: 98%;
+}
+h2{
+    margin: 2% 0 0 5%;
+}
+.contenido{
+    margin: 1%;
+    border: 1px solid;
+    padding: 5% 0 5% 0;
+}
+.contenido a{
+    text-decoration: none;
+}
+.contenido > span{
+    margin-left: 5%;
+}
+th{
+    cursor: pointer;
+}

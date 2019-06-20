@@ -1,0 +1,20 @@
+.inicio{
+    padding: 0;
+}
+.inicio > div{
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+button,table,h5{
+    margin: 1%;
+}
+a{
+    text-decoration: none;
+}
+table{
+    width: 98%;
+}
+.inicio > div >p{
+    width: 33%;
+}

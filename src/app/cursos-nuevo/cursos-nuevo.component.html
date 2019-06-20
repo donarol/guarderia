@@ -1,0 +1,71 @@
+<div class="contenedor">
+
+  <div class="contenido">
+    <div>
+      <button type="button" class="btn btn-secondary" routerLink="/cursos_inicio">Atras</button>
+      <div>
+        <p>Nombre del Curso:</p>
+        <input class="form-control form-control-sm" type="text" placeholder="Nombre del Curso"[(ngModel)]="nombreCurso">
+      </div>
+
+      <div class="selectores">
+        <p>Seccion:</p>
+        <select class="form-control" (change)='onChangeSeccion($event)'>
+          <option *ngFor="let secc of secciones;index as i"  value="{{i}}" >{{secc.nombre}}</option>
+        </select>
+      </div>
+
+      <div class="selectores">
+        <p>Turno:</p>
+        <select class="form-control" (change)='onChangeTurno($event)'>
+          <option *ngFor="let turno of turnos;index as i"  value="{{i}}" >{{turno.nombre}}</option>
+        </select>
+      </div>
+
+      <div class="selectores">
+        <p>Sucursal:</p>
+        <p>{{sucursal.nombre}}</p>
+        
+      </div>
+
+      <div class="selectores">
+        <p>Gestion:</p>
+        <select class="form-control"(change)='onChangeGestion($event)'>
+          <option *ngFor="let gestion of gestiones;index as i"  value="{{i}}">{{gestion}}</option>
+        </select>
+      </div>
+      <!--
+      <div class="selectores" *ngFor="let componente of componentes">
+        <p>{{componente.etiqueta}}</p>
+        <select class="form-control">
+          <option *ngFor="let dato of componente.datos">{{dato}}</option>
+        </select>
+      </div>-->
+      <button type="button" class="btn btn-secondary" (click)="ff()">Crear Curso</button>
+    </div>
+    <!--
+    <div>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" *ngFor="let titulo of titulos">{{titulo}}</th>
+              </tr>
+            </thead>
+          </table>
+    </div>-->
+  </div>
+
+  <nav class="nave">
+      <label>Lista de Cursos</label>
+
+      <select size="8" class="form-control">
+           <option data-toggle="modal" data-target="#modal-curso" class="list-group-item list-group-item-action"  *ngFor="let curso of muestraCursos" (click)="verCurso(curso)">{{curso.nombre}}</option>
+       </select>
+       
+  </nav>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal-curso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <app-cursos-datos [curso]="enviaCurso"></app-cursos-datos>
+  </div>

@@ -1,0 +1,75 @@
+
+.nave{
+    width: 98%;
+	margin: 1%;
+    border: 2px solid;
+}
+.contenido{
+	width: 98%;
+	margin: 1%;
+	height: 100%;
+	border: 2px solid;
+}
+ul{
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+select{
+    width: 98%;
+}
+
+ul > a{
+    width: 50%;
+    background: #363636;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5%;
+    cursor: pointer;
+}
+ul > a:hover{
+    background: #1A6997;
+    color: #ffffff;
+}
+.custom-file{
+    margin: 1%;
+    width: 98%;
+}
+.activo{
+    background:  #1A6997;
+}
+.contenido-datos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+}
+.contenido-datos p,.contenido-datos a{
+    width: 49%;
+    text-decoration: none;
+}
+select,h3,h4,button{
+    margin: 1%;
+}
+
+.especificacion{
+    display: flex;
+    flex-wrap: wrap;
+}
+.especificacion > div{
+    width: 48%;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.especificacion > div >p{
+    margin: 2%;
+}
+
+.table{
+    margin: 1%;
+    width: 98%;
+}

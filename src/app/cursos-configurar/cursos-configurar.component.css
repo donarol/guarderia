@@ -1,0 +1,46 @@
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nave{
+    width: 30%;
+    margin: 1%;
+}
+.contenido{
+	width: 66%;
+	margin: 1%;
+	height: 100%;
+	padding: 1%;
+}
+.contenido div{
+	width: 100%;
+	padding: 1%;
+}
+.contenido > div > p{
+	margin-right: 2%;
+} 
+select,input{
+	width: 100%;
+}
+button{
+	margin:2% 0 1% 1%;
+}
+.selectores{
+    display: flex;
+    flex-wrap: wrap;	
+}
+.selectores p{
+	width: 30%;
+}
+.selectores select{
+	width:70%;
+}
+.nave select{
+	margin-bottom: 2%;
+}
+select.largo{
+    height: 80%;
+}
+.list-group-item{
+	cursor: pointer;
+}

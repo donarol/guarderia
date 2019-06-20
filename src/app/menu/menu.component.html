@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" >
+        <li class="nav-item" *ngFor="let componente of componentes">
+            <a class="nav-link" routerLink="/{{componente.router}}">{{componente.etiqueta}}</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto" >
+              <li class="nav-item" *ngFor="let componente_0 of componentes_0">
+                  <a class="nav-link" data-toggle="modal" id="{{componente_0.id}}"(click)="cerrar()" attr.data-target="#{{componente_0.tar}}">{{componente_0.etiqueta}}</a>
+              </li>
+            </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modal-entrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <app-login></app-login>
+  </div>
+  <div class="modal fade" id="modal-crear" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <app-cuenta-nueva></app-cuenta-nueva>
+  </div>

@@ -1,0 +1,35 @@
+<div class="modal-dialog modal-dialog-centered " role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Alergias</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <label >Nombre de la Alergia:</label>
+        <input type="text" [(ngModel)]='n_alergia.nombre'>
+      </div>
+      <div>
+        <label>Descripccion:</label>
+        <textarea class="form-control" [(ngModel)]='n_alergia.descripcion'></textarea>
+      </div>
+      <div>
+        <label>Alergias Ingresadas:</label>
+        <nav class="nave">
+            <select size="4" class="form-control">
+                 <option data-toggle="modal" data-target="#modal-curso" class="list-group-item list-group-item-action" *ngFor="let alergia of alergias" (click)="ver(alergia)">{{alergia.nombre}}</option>
+             </select>
+             
+        </nav>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <div *ngFor="let componente of componentes">
+          <button type="button" class="btn btn-secondary" (click)="botones(componente)">{{componente}}</button>
+        </div>
+    </div>
+  </div>
+</div>
+  

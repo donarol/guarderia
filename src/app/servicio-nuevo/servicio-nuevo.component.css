@@ -1,0 +1,31 @@
+
+.superior{
+    display: flex;
+    flex-wrap: wrap;
+}
+.izq{
+    margin: 2%;
+    width: 66%;
+}
+.der{
+    margin: 2% 1%;
+    width: 26%;
+}
+.corto{
+    margin: 1% 0 1% 1%;
+    display: flex;
+    flex-wrap: wrap;	
+}
+.corto p{
+	width: 30%;
+}
+.corto select{
+	width:70%;
+}
+.form-control{
+    height: 90%;
+}
+
+.inferior{
+    margin: 2%;
+}

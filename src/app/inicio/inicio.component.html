@@ -1,0 +1,10 @@
+<div class="contenedor">
+  <nav class="nave">
+    <ul>
+      <a *ngFor="let componente of componentes index as i"  routerLink="/{{componente.router}}">{{componente.etiqueta}}</a>
+    </ul>
+  </nav>
+  <div class="contenido">
+      <router-outlet></router-outlet>
+  </div>
+</div>

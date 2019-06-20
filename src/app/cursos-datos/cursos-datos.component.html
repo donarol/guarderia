@@ -1,0 +1,41 @@
+<div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{curso.nombre}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--
+        <div class="contenido" *ngFor="let componente of componentes">
+          <p>{{componente.etiqueta}}</p>
+          <p>{{componente.dato}}</p>
+        </div>
+        -->
+        <div class="contenido">
+          <p>Nombre del Curso:</p>
+          <p>{{curso.nombre}}</p>
+        </div>
+        
+        <div class="contenido">
+            <p>Seccion:</p>
+            <p>{{curso.seccion}}</p>
+          </div>
+          
+        <div class="contenido">
+            <p>Turno:</p>
+            <p>{{curso.turno}}</p>
+          </div>
+          
+        <div class="contenido">
+            <p>Gestion:</p>
+            <p>{{curso.gestion}}</p>
+          </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+

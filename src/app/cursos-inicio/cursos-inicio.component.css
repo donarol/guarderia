@@ -1,0 +1,24 @@
+.inicio{
+    margin: 1%;
+    display: flex;
+	flex-wrap:wrap; 
+}
+.columna{
+	margin: 1.5%;
+	border:1px solid;
+	height: 45vh;
+	background: #fff;
+	padding: 0;
+	width: 47%;
+}
+.columna a{
+    width:100%;
+    display: block;
+    padding: 5%;
+    background: #363636;
+    color: #ffffff;
+    text-decoration:none;
+}
+.columna a:hover{
+    background:  #1A6997;
+}

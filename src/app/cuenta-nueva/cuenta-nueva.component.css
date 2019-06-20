@@ -1,0 +1,17 @@
+input{
+    width: 100%;
+}
+.inicio{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 1%;
+}
+.corto{
+    width: 48%;
+    margin: 1%;
+}
+.largo{
+    width:98%;
+    margin: 1%;
+}

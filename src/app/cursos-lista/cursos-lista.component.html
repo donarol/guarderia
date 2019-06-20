@@ -1,0 +1,57 @@
+<div class="modal-dialog modal-xl modal-dialog-centered " role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Cursos</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="contenedor">
+
+        <div class="contenido">
+          <div>
+            <div class="selectores">
+              <p>Seccion:</p>
+              <select class="form-control" (change)='onChangeSeccion($event)'>
+                <option *ngFor="let secc of secciones;index as i"  value="{{i}}" >{{secc.nombre}}</option>
+              </select>
+            </div>
+      
+            <div class="selectores">
+              <p>Turno:</p>
+              <select class="form-control" (change)='onChangeTurno($event)'>
+                <option *ngFor="let turno of turnos;index as i"  value="{{i}}" >{{turno.nombre}}</option>
+              </select>
+            </div>
+      
+            <div class="selectores">
+              <p>Sucursal:</p>
+              <p>{{sucursal.nombre}}</p>
+              
+            </div>
+            <div class="selectores">
+              <p>Gestion:</p>
+              <select class="form-control"(change)='onChangeGestion($event)'>
+                <option *ngFor="let gestion of gestiones;index as i"  value="{{i}}">{{gestion}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      
+        <nav class="nave">
+            <label>Lista de Cursos</label>
+            <select size="4" class="form-control">
+                 <option data-toggle="modal" data-target="#modal-curso" class="list-group-item list-group-item-action"  *ngFor="let curso of muestraCursos" (click)="seleccionCurso(curso)">{{curso.nombre}}</option>
+             </select>
+        </nav>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <div >
+          <button type="button" class="btn btn-primary"  ng-click="enviarCurso()">Aceptar</button>
+        </div>
+    </div>
+  </div>
+</div>
+  

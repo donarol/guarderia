@@ -1,0 +1,49 @@
+
+<div class="inicio">
+  <div>
+    <h4>Sucursales</h4>
+  </div>
+  <div class="accordion" id="accordionExample">
+      <div class="card" *ngFor="let sucursal of sucursales;index as i">
+        <div class="card-header" id="heading_{{i}}">
+            <button class="btn" type="button" id="button_{{i}}" data-toggle="collapse" aria-expanded="true" (click)="uno(i)">
+              {{sucursal.nombre}}
+            </button> 
+        </div>
+        <div id="collapse_{{i}}" class="collapse" data-parent="#accordionExample">
+          <div class="card-body">
+              <div class="columna">
+                  <p>Nombre:</p>
+                  <p>{{sucursal.nombre}}</p>
+                  <a  data-toggle="modal" data-target="#modal-sucursal" href="" (click)="cambiar(sucursal)">cambiar</a>    
+                  <p>Direccion:</p>
+                  <p>{{sucursal.direccion}}</p>
+              </div>
+              <div class="inferior">
+                <div class="columna" *ngFor="let seccion of secciones[i]">
+                  <p>{{seccion.nombre}}</p>
+                  <!--
+                  <p *ngIf="seccion.estado;else desac">Activado</p>
+                  <ng-template #desac>
+                    <p>Desactivado</p>
+                  </ng-template>-->
+                  <label class="switch">
+                    <input type="checkbox" [(ngModel)]="seccion.estado">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+   <div>
+     <button class="btn agregar btn-secondary">Agregar Sucursal</button>
+   </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal-sucursal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <app-sucursal-cambiar [sucursal]='enviarSucursal'></app-sucursal-cambiar>
+    </div>

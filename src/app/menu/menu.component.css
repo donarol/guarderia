@@ -1,0 +1,6 @@
+.nav-item a:hover{
+    color: #ffffff;
+}
+.nav-link{
+    cursor: pointer;
+}

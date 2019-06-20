@@ -1,0 +1,55 @@
+<div class="inicio">
+  <div class="superior">
+    <div class="izquierda">
+      <p>aqui la foto</p>
+      <button type="button">...</button>
+    </div>
+    <div class="derecha">
+      <div class="largo">
+        <p>Nombre</p>
+        <input type="text">
+      </div>
+      <div class="largo">
+        <p>Apellidos</p>
+        <input type="text">
+      </div>
+      <div class="largo">
+        <p>Carnet de Identidad</p>
+        <input type="text">
+      </div>
+      <div class="largo">
+        <p>Parentesco</p>
+        <input type="text">
+      </div>
+    </div>
+  </div>
+  <div class="inferior">
+    <div class="input-group justify-content-between ">
+        <div class="input-group-prepend pull-right">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+          <input type="text" class="form-control" placeholder="Buscar..." >
+        </div>
+    </div>
+    <table class="table" id="tabla">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Actividad</th>
+            <th scope="col">fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">1</th>
+                <th scope="col">aa</th>
+                <th scope="col">as</th>
+              </tr>
+        </tbody>
+    </table>
+    <div class="modal-footer">
+      <div *ngFor="let componente of componentes">
+        <button type="button" class="btn btn-secondary" (click)="botones(componente)">{{componente}}</button>
+      </div>
+    </div>
+  </div>
+</div>

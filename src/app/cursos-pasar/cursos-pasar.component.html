@@ -1,0 +1,57 @@
+<div class="inicio">
+  <div class="inferior">
+      <button class="btn btn-secondary" routerLink="/cursos_inicio">Atras</button>
+  </div>
+  <div class="izq">
+    <label>Secciones</label>
+    <select class="form-control">
+      <option *ngFor="let seccion of secciones">{{seccion}}</option>
+    </select>
+    <label>Lista de Cursos</label>
+    <select size="8" class="form-control">
+      <option data-toggle="modal" data-target="#modal-curso"  class="list-group-item list-group-item-action" *ngFor="let curso of cursos">{{curso}}</option>
+    </select>
+    
+  </div>
+  <div class="der">
+    <p>Nombre del Curso</p>
+    <div>
+        <label>Nuevo Turno:</label>
+        <select  class="form-control">
+          <option  *ngFor="let turno of turnos">{{turno}}</option>
+        </select>
+    </div>
+    <div *ngFor="let componente of componentes">
+      <label>{{componente.etiqueta}}</label>
+      <label>{{componente.dato}}</label>
+    </div>
+    <div>
+      <label >Lista de Alumnos</label>
+      <table class="table" id="tabla">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Seleccion</th>
+              <th scope="col">Nombre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <th><input type="checkbox"></th>
+              <th>Todos</th>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="inferior">
+      <button class="btn btn-secondary">Pasar Curso</button>
+  </div>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal-curso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <app-cursos-datos></app-cursos-datos>
+    </div>

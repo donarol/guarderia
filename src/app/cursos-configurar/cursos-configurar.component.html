@@ -1,0 +1,69 @@
+<div class="contenedor">
+  <nav class="nave">
+    <label>Lista de Cursos</label>
+    <select class="form-control"(change)='onChangeGestion($event)'>
+      <option *ngFor="let gestion of gestiones" >{{gestion}}</option>
+    </select>
+    <select  size="8" class="form-control largo">
+      <option class="list-group-item list-group-item-action" *ngFor="let curso of muestraCursos"(click)='muestra(curso)'>{{curso.nombre}}</option>
+    </select>
+
+</nav>
+  <div class="contenido">
+    <div >
+      <button type="button" class="btn btn-secondary" routerLink="/cursos_inicio">Atras</button>
+      <div>
+        <p>Nombre del Curos:</p>
+        <input class="form-control form-control-sm" type="text" placeholder="Nombre del Curso" [(ngModel)]='curso.nombre'>
+      </div>
+      <div class="selectores">
+        <p>Seccion:</p>
+        <select class="form-control">
+          <option *ngFor="let seccion of secciones">{{seccion.nombre}}</option>
+        </select>
+      </div>
+
+      <div class="selectores">
+        <p>Turno:</p>
+        <select class="form-control">
+          <option *ngFor="let turno of turnos">{{turno.nombre}}</option>
+        </select>
+      </div>
+
+      <div class="selectores">
+        <p>Sucursal:</p>
+        <p>{{sucursal.nombre}}</p>
+
+      </div>
+
+      <div class="selectores">
+        <p>Gestion:</p>
+        <select class="form-control">
+          <option *ngFor="let gestion of gestiones">{{gestion}}</option>
+        </select>
+      </div>
+
+      <!--
+      <div class="selectores" *ngFor="let componente of componentes">
+        <p>{{componente.etiqueta}}</p>
+        <select class="form-control">
+          <option *ngFor="let dato of componente.datos">{{dato}}</option>
+        </select>
+      </div>
+      -->
+      <button type="button" class="btn btn-secondary">Modificar Curso</button>
+    </div>
+    <!--
+    <div>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" *ngFor="let titulo of titulos">{{titulo}}</th>
+              </tr>
+            </thead>
+          </table>
+    </div>-->
+  </div>
+
+
+</div>

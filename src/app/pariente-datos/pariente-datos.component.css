@@ -1,0 +1,36 @@
+.inicio{
+    margin: 1%;
+}
+.superior{
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+}
+.izquierda{
+    width:30%;
+    height: 100%;
+}
+.derecha{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+}
+.inferior{
+    margin: 1%;
+    width: 98%;
+    border: 1px solid;
+}
+.derecha input[type=text]{
+    width: 100%;
+    margin: 0 0 1% 0;
+}
+.derecha p{
+    margin:0;
+}  
+.largo{
+    width: 97%;
+    margin-left: 1%;
+}

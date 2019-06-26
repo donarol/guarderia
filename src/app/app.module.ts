@@ -52,6 +52,8 @@ import { from } from 'rxjs';
 import { CursosListaComponent } from './cursos-lista/cursos-lista.component';
 import { ParienteNuevoComponent } from './pariente-nuevo/pariente-nuevo.component';
 import { ParienteDatosComponent } from './pariente-datos/pariente-datos.component';
+import { AdministradorPersonalComponent } from './administrador-personal/administrador-personal.component';
+import { AdministradorHistorialComponent } from './administrador-historial/administrador-historial.component';
 const routes: Routes = [
   { path: 'mi_cuenta', component: MiCuentaComponent},
   { path: '',component:InicioComponent},
@@ -71,7 +73,7 @@ const routes: Routes = [
      {path:'turno_cambio/:id',component:TurnoCambiarComponent},
      {path:'servicio_inicio',component:ServicioInicioComponent},
      {path:'administrador_inicio',component:AdministradorInicioComponent},
-     {path:'administrador_datos',component:AdministradorDatosComponent},
+     {path:'administrador_datos/:id',component:AdministradorDatosComponent},
      {path:'turno_nuevo',component:TurnoNuevoComponent},
      {path:'servicio_nuevo',component:ServicioNuevoComponent}]}
   ];
@@ -108,7 +110,9 @@ const routes: Routes = [
     SeccionInicioComponent,
     CursosListaComponent,
     ParienteNuevoComponent,
-    ParienteDatosComponent
+    ParienteDatosComponent,
+    AdministradorPersonalComponent,
+    AdministradorHistorialComponent
   ],
   imports: [
     BrowserModule,

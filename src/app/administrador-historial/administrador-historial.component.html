@@ -1,0 +1,29 @@
+<div class="historial-user">
+  <div class="calendario">
+    <h3>HISTORIAL</h3>
+    <h4>Area</h4>
+    <select class="form-control">
+      <option *ngFor="let area of areas" value="area.etiqueta">{{area.valor}}</option>
+    </select>
+    <div class="especificacion">
+      <div>	
+        <p>desde:</p>
+        <input type="date">
+      </div>
+      <div>
+        <p>hasta:</p>
+        <input type="date" >	
+      </div>
+      <button class="btn btn-secondary">generar</button>
+    </div>
+  </div>
+  <table class="table" id="tabla">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Actividad</th>
+          <th scope="col">fecha</th>
+        </tr>
+      </thead>
+  </table>
+</div>

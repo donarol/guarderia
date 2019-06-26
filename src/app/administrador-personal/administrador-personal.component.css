@@ -1,0 +1,18 @@
+.custom-file{
+    margin: 1%;
+    width: 98%;
+}.contenido-datos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+}
+.contenido-datos p,.contenido-datos a{
+    width: 49%;
+    text-decoration: none;
+}
+img{
+    display: block;
+    margin: auto;
+    max-height: 240px;
+    max-width: 550px;
+}

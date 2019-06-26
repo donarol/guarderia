@@ -1,8 +1,9 @@
-export interface Turno{
-    nombre:string;
-    monto:number;
-    horaInicio:string;
-    horaFin:string;
-    gestion:string;
-    id:string;
+export class Turno{
+    nombre:string='';
+    monto:number=0;
+    horaInicio:string='';
+    horaFin:string='';
+    gestion:string='';
+    id:string='';
+    
 }

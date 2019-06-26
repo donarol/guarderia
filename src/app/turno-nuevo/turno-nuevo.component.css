@@ -39,6 +39,6 @@ button{
 .selectores p{
 	width: 30%;
 }
-.selectores select{
+.selectores select,.selectores input{
 	width:68%;
 }

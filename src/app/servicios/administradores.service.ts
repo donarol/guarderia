@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
-import { reject } from 'q';
+import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -37,15 +37,26 @@ export class AdministradoresService {
      )
     .subscribe()
   }
-  getAdministradores(){    
-    console.log("hola: "+this.administradorCollection);
-    this.administradores=this.administradorCollection.valueChanges();
+  
+  getAdministradores(){
+    //this.administradorCollection=this.afData.collection<Administrador>('');
+    this.administradores=this.administradorCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as Administrador;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    );
     return this.administradores;
+
+    /*console.log("hola: "+this.administradorCollection);
+    this.administradores=this.administradorCollection.valueChanges();
+    return this.administradores;*/
   }
   getAdministrador(uid){
     this.administradorDocument=this.afData.doc<Administrador>(`administradores/${uid}`);
-    this.administrador=this.administradorDocument.valueChanges();
-    return this.administrador;
+
+    return this.administradorDocument.valueChanges();
   }
   nuevoAdministrador(email:string,password:string,nuevoAdmin:Administrador){
     this.afAuth.auth.createUserWithEmailAndPassword(email,password).then(function(){

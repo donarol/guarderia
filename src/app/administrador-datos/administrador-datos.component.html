@@ -1,65 +1,17 @@
 <div class="contenedor">
   <nav class="nave">
     <ul>
-      <a *ngFor="let componente of componentes index as i" (click)="setShow(i)">{{componente}}</a>
+      <a (click)="cambio(true)">Datos Personales</a>
+      <a (click)="cambio(false)">Historial</a>
     </ul>
   </nav>
   <div class="contenido">
     <div>
       <button type="button" class="btn btn-secondary" routerLink="/administrador_inicio">Atras</button>
     </div>
-    <ng-template #showE>
-      <div class="datos-user">
-          <div class="imagen">
-            <figure >
-              <img src="" id="fotografia"/>
-              <figcaption >
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile">
-                  <label class="custom-file-label" for="customFile">Choose file</label>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-    
-          <div class="datos">
-            <div class="contenido-datos" *ngFor="let dato of datos;index as i">
-              <p class="etiqueta">{{dato.etiqueta}}</p>
-              <p>{{dato.user}}</p>
-              <a href="">{{dato.nuevo}}</a>
-              <!--<p *ngFor="let punto of datos[i]">{{punto}}</p>-->
-            </div>
-          </div>
-        </div>
+    <app-administrador-personal *ngIf="show;else historial" [administrador]="administrador"></app-administrador-personal>
+    <ng-template #historial>
+      <app-administrador-historial></app-administrador-historial>
     </ng-template>
-    <div class="historial-user" *ngIf="show; else showE ">
-      <div class="calendario">
-        <h3>HISTORIAL</h3>
-        <h4>Area</h4>
-        <select class="form-control">
-          <option *ngFor="let area of areas" value="area.etiqueta">{{area.valor}}</option>
-        </select>
-        <div class="especificacion">
-          <div>	
-            <p>desde:</p>
-            <input type="date">
-          </div>
-          <div>
-            <p>hasta:</p>
-            <input type="date" >	
-          </div>
-          <button class="btn btn-secondary">generar</button>
-        </div>
-      </div>
-      <table class="table" id="tabla">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Actividad</th>
-              <th scope="col">fecha</th>
-            </tr>
-          </thead>
-      </table>
-    </div>
   </div>
 </div>

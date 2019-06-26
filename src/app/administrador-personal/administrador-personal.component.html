@@ -1,0 +1,47 @@
+<div class="datos-user">
+  <div class="imagen">
+    <figure >
+      <div>
+        <img src="{{administrador.fotografia}}">
+      </div>
+      <figcaption >
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile">
+          <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="datos">
+    <div class="contenido-datos">
+      <p>Nombre:</p>
+      <p>{{administrador.nombre}}</p>
+    </div>    
+    <div class="contenido-datos">
+      <p>Apellido:</p>
+      <p>{{administrador.apellido}}</p>
+    </div>
+    <div class="contenido-datos">
+      <p>Carnet:</p>
+      <p>{{administrador.carnet}}</p>
+    </div>
+    <div class="contenido-datos">
+      <p>Telefono:</p>
+      <p>{{administrador.telefono}}</p>
+    </div>
+    <div class="contenido-datos">
+      <p>Permiso:</p>
+      <p>{{administrador.permiso}}</p>
+    </div>
+    <div class="contenido-datos">
+      <p>Sucursal:</p>
+      <p>aqui la sucursal</p>
+    </div>
+    <!--<div class="contenido-datos" *ngFor="let dato of datos;index as i">
+      <p class="etiqueta">{{dato.etiqueta}}</p>
+      <p>{{dato.user}}</p>
+      <a href="">{{dato.nuevo}}</a>
+      <p *ngFor="let punto of datos[i]">{{punto}}</p>-->
+  </div>
+</div>

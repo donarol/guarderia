@@ -24,7 +24,7 @@ export class TurnosService {
   );
     return this.turnos;
   }
-  getTurno(uidTurno:Turno,uidSucursal:Sucursal){
+  getTurno(uidTurno:any,uidSucursal:any){
     console.log("el Turno: "+uidTurno)
     console.log("la sucursal: "+uidSucursal)
     this.turnoDocument=this.afData.doc<Turno>(`sucursales/${uidSucursal.id}/turnos/${uidTurno}`);

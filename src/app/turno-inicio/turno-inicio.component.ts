@@ -35,7 +35,7 @@ export class TurnoInicioComponent implements OnInit {
       }else{
         console.log("no existe");
       }
-    })
+    });
   }
   ver(ev){
     this.turno=ev

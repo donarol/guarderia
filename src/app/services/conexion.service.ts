@@ -18,8 +18,8 @@ export class ConexionService {
     /*this.itemsCollection = afs.collection<Item>('items');
     this.items = this.itemsCollection.valueChanges();*/
    }
-   email:string='mancachirolando@gmail.com';
-   pass:string='Sam7121995';
+   email:string='';
+   pass:string='';
   login() {
     this.existe();
     console.log("entor");
